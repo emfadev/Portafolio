@@ -1,0 +1,223 @@
+:root {
+    --1: #424242;
+    --2: #fca311;
+    --3: #e5e5e5;
+    --4: #2a2a2a;
+    --5: #000000;
+}
+html {
+    box-sizing: border-box;
+    cursor: url(../svg/arrow-pointer-solid.svg), auto;
+    font-size: 62.5%;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+body {
+    background-color: var(--5);
+    color: var(--3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
+/* SCROLL y CURSOR */
+*::-webkit-scrollbar {
+    border-radius: .5rem;
+    height: .8rem;
+    width: .8rem;
+}
+*::-webkit-scrollbar-corner {
+    display: none;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--2);
+    border-radius: .5rem;
+}
+a:hover {
+    cursor: url(../svg/hand-pointer-regular.svg), auto;
+}
+
+/* GENERAL */
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+h1, h2, h3, p {
+    text-align: center;
+}
+h2 {
+    font-size: 2.5rem;
+}
+
+/* UTILIDADES */
+.contenedor {
+    margin: 5rem auto 0;
+    width: min(100rem, 90%);
+}
+.centrar {
+    margin: 0 auto;
+}
+
+/* COMIENZO */
+
+/* Perfil */
+.ws {
+    bottom: 3rem;
+    font-size: 5rem;
+    position:fixed;
+    right: 4rem;
+}
+.ws__btn {
+    color: #25D366;
+    transition: color .4s ease, transform .4s ease;
+}
+
+.ws__btn:hover {
+    color: #129d45;
+    transform: scale(110%);
+}
+.perfil {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.perfil__img {
+    max-width: 25rem;
+    position: relative;
+}
+.perfil__saludo {
+    font-size: 6rem;
+    margin: 0 7rem -2rem 0;
+    position: absolute;
+}
+
+/* Nombre */
+.cont-nombre {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    width: min(60rem, 90%);
+}
+.nombre__logo {
+    margin-top: 1rem;
+    max-width: 15rem;
+    transition: transform .4s ease;
+}
+.nombre__logo:hover {
+    transform: scale(110%);
+}
+
+/* Servicios */
+.cont-servicios {
+    background-color: var(--4);
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+    padding: 3rem;
+}
+.descServicio {
+    margin-bottom: 5rem;
+    max-width: 50rem;
+}
+.servicios {
+    margin-bottom: 5rem;
+    text-align: center; /* Centrar iconos font awesome */
+}
+@media (min-width: 540px) {
+    .servicios {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 768px) {
+    .servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.servicio__icon {
+    color: var(--2);
+    font-size: 5rem;
+}
+.seccion__icono {
+    font-size: 2rem;
+}
+.servicio__titulo {
+    color: var(--2);
+}
+
+/* Edu y Exp */
+@media (min-width: 540px) {
+    .cont-yo {
+        column-gap: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 5rem;
+    }
+}
+.secciones {
+    display: grid;
+    grid-template-rows: auto;
+    height: 50rem;
+    overflow-y: scroll;
+}
+.seccion__linea {
+    background-color: var(--3);
+    height: 50rem;
+    margin-left: 2.8rem;
+    position: absolute;
+    width: .5rem;
+}
+.seccion {
+    align-items: center;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.seccion:last-of-type {
+    margin-bottom: 0;
+}
+.seccion__icon {
+    align-items: center;
+    background-color: var(--2);
+    border-radius: 50%;
+    border: 5px solid var(--4);
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+    min-height: 6rem;
+    min-width: 6rem;
+    position: relative;
+}
+.seccion__desc {
+    background-color: var(--1);
+    border-radius: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+.seccion__titulo,
+.seccion__texto {
+    margin: 0;
+    text-align: start;
+}
+
+/* HABILIDADES */
+.cont-habilidades {
+    background-color: var(--1);
+    border-radius: 1rem;
+    overflow-y: scroll;
+    padding: 3rem;
+}
+.habilidades {
+    display: flex;
+    gap: 2rem;
+}
+.habilidad {
+    height: 12rem;
+}
+
+/* FOOTER */
+.footer {
+    padding-bottom: 1rem;
+}
